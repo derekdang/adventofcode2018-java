@@ -34,11 +34,6 @@ public class aoc7dot2
         });
 
         Set<Worker> workers = new HashSet<>();
-        while (workers.size() < 5 && !availableSteps.isEmpty()) {
-            String currStep = availableSteps.poll();
-            Worker worker = new Worker(currStep.charAt(0));
-            workers.add(worker);
-        }
         int elapsedTime = 0;
 
         /**
