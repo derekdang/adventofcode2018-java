@@ -22,7 +22,6 @@ public class aoc9 {
             }
 
             if (elfNum == input[0]) elfNum = 0;
-            System.out.println(marbleNum);
         }
 
         long max = 0;
