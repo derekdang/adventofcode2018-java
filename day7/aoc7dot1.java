@@ -49,6 +49,6 @@ public class aoc7dot1
             }
         }
 
-        System.out.printf("Order of steps: %s", sb.toString());
+        System.out.printf("Order of steps: %s", sb.toString()); // 7-1 answer is PFKQWJSVUXEMNIHGTYDOZACRLB
     }
 }
