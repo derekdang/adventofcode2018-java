@@ -27,6 +27,7 @@ public class aoc12 {
         StringBuilder sb = new StringBuilder(initialState);
 
         System.out.printf("%d:\t%s\n", 0, sb.toString());
+        int prevSum = -1;
         for (int i = 1; i <= 500; i++) {
             String state = sb.toString();
             for (int start = 2; start < sb.length()-2; start++) {
@@ -37,7 +38,6 @@ public class aoc12 {
                     sb.setCharAt(start, '.');
                 }
             }
-            System.out.printf("%d:\t%s\n", i, sb.toString()); // Ans for part 1 is 3738
 
             int sum = 0;
             for (int j = 0; j < sb.length(); j++) {
@@ -45,7 +45,12 @@ public class aoc12 {
                     sum += j-6;
                 }
             }
-            System.out.println(sum); // Part 2, at gen 100 we are adding +78 with each generation, ans is 3900000002467
+            /**
+             * Ans for part 1 is 3738
+             * Ans for part 2 is 3900000002467, at gen 100 we are adding +78 with each generation
+             */
+            System.out.printf("Gen: %d\tSum: %d\tDiff: %d\n", i, sum, sum-prevSum);
+            prevSum = sum;
         }
     }
 }
